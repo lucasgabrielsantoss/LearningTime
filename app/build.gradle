@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.learningtime"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation Libs.coroutines
+    implementation Libs.kotlin
+    implementation Libs.core
+    implementation Libs.appCompat
+    implementation Libs.constraintLayout
+    implementation Libs.material
+    implementation Libs.rxJava2
+    implementation Libs.navigationFragment
+    implementation Libs.navigationRuntime
+    implementation Libs.navigationUI
+    implementation Libs.koinCore
+    implementation Libs.koinAndroid
+    implementation Libs.koinScope
+    implementation Libs.koinViewModel
+    implementation Libs.room
+    implementation Libs.retrofit
+    implementation Libs.gson
+    implementation Libs.rxjava2
+    implementation Libs.convertergson
+    implementation Libs.okhttp
+    implementation Libs.mockwebserver
+    implementation Libs.auth
+    implementation Libs.baseClientLibrary
+    implementation Libs.identity
+    implementation Libs.locationService
+    implementation Libs.kotlin
+}
