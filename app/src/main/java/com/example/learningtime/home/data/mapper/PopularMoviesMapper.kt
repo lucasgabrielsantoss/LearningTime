@@ -7,20 +7,20 @@ class PopularMoviesMapper : Mapper<MovieResponse, MovieModel> {
 
     override fun map(source: MovieResponse): MovieModel {
         return MovieModel(
-            adult = source.adult,
-            backdropPath = source.backdropPath,
-            genreIds = source.genreIds,
-            id = source.id,
-            originalLanguage = source.originalLanguage,
-            originalTitle = source.originalTitle,
-            overview = source.overview,
-            popularity = source.popularity,
-            posterPath = source.posterPath,
-            releaseDate = source.releaseDate,
-            title = source.title,
-            video = source.video,
-            voteAverage = source.voteAverage,
-            voteCount = source.voteCount
+            adult = source.adult?: false,
+            backdropPath = source.backdropPath ?: "",
+            genreIds = source.genreIds?: listOf(),
+            id = source.id?: 0,
+            originalLanguage = source.originalLanguage?: "",
+            originalTitle = source.originalTitle?: "",
+            overview = source.overview?: "",
+            popularity = source.popularity?: 0.0,
+            posterPath = source.posterPath?: "",
+            releaseDate = source.releaseDate?: "",
+            title = source.title?: "",
+            video = source.video?: false,
+            voteAverage = source.voteAverage?: 0f,
+            voteCount = source.voteCount?: 0
         )
     }
 }

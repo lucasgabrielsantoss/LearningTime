@@ -1,6 +1,8 @@
 package com.example.learningtime.home.data.api
 
 import com.google.gson.GsonBuilder
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -13,6 +15,10 @@ class ServiceRetrofit {
         val service: PopularMoviesService
 
         init {
+                val client = OkHttpClient.Builder()
+                val interceptor = HttpLoggingInterceptor()
+                interceptor.level = HttpLoggingInterceptor.Level.BODY
+                client.addInterceptor(interceptor)
 
             val gson = GsonBuilder().setLenient().create()
 

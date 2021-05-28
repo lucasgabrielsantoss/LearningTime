@@ -38,6 +38,7 @@ object Libs {
     const val convertergson = "com.squareup.retrofit2:converter-gson:${Version.retrofitVersion}"
     const val okhttp = "com.squareup.okhttp3:okhttp:${Version.okhttpVersion}"
     const val mockwebserver = "com.squareup.okhttp3:mockwebserver:${Version.okhttpVersion}"
+    const val http = "com.squareup.okhttp3:logging-interceptor:${Version.http}"
     //Google Services
     const val locationService= "com.google.android.gms:play-services-location:${Version.locationServiceVersion}"
     const val auth = "com.google.android.gms:play-services-auth:${Version.authVersion}"

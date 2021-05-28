@@ -23,4 +23,5 @@ object Version {
     const val identityVersion = "17.0.0"
     const val coroutines = "1.4.0"
     const val coroutinesManager = "1.5.0-RC"
+    const val http = "3.9.0"
 }
